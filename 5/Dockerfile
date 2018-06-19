@@ -18,7 +18,7 @@ LABEL summary="$SUMMARY" \
       io.k8s.display-name="Varnish 5" \
       io.openshift.expose-services="8080:http,8443:https" \
       io.openshift.tags="builder,varnish,rh-varnish5" \
-      com.redhat.component="rh-varnish5-docker" \
+      com.redhat.component="rh-varnish5-container" \
       version="5" \
       usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=5/test/test-app/ centos/varnish-5-centos7 sample-server" \
       name="centos/varnish-5-centos7" \
