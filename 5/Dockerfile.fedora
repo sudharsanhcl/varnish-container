@@ -9,7 +9,7 @@ running Varnish server or building Varnish-based application. \
 Varnish Cache stores web pages in memory so web servers don't have to create \
 the same web page over and over again. Varnish Cache serves pages much faster \
 than any application server; giving the website a significant speed up." \
-    VERSION=0 RELEASE=1 \
+    VERSION=0 \
     VARNISH_CONFIGURATION_PATH=/etc/varnish
 
 LABEL summary="$SUMMARY" \
@@ -19,8 +19,8 @@ LABEL summary="$SUMMARY" \
       io.openshift.expose-services="8080:http,8443:https" \
       io.openshift.tags="builder,varnish" \
       version="$VERSION" \
-      release="$RELEASE.$DISTTAG" \
-      usage="Invoke this container directly to get more info on how it should be used." \
+      com.redhat.component="varnish" \
+      usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=5/test/test-app/ $FGC/varnish sample-server" \
       name="$FGC/varnish" \
       maintainer="SoftwareCollections.org <sclorg@redhat.com>"
 
