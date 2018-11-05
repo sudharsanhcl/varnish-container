@@ -1,4 +1,4 @@
-FROM candidate-registry.fedoraproject.org/f27/s2i-core:latest
+FROM registry.fedoraproject.org/f28/s2i-core:latest
 
 EXPOSE 8080
 EXPOSE 8443
