@@ -1,6 +1,4 @@
 FROM rhscl/s2i-core-rhel7:1
-# RHSCL rh-varnish5 image.
-
 EXPOSE 8080
 EXPOSE 8443
 
@@ -22,7 +20,7 @@ LABEL summary="$SUMMARY" \
       version="5" \
       usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=5/test/test-app/ rhscl/varnish-5-rhel7 sample-server" \
       name="rhscl/varnish-5-rhel7" \
-      maintainer="SoftwareCollections.org <sclorg@redhat.com>"
+      maintainer="Uhliarik Lubos <luhliari@redhat.com>"
 
 RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish5-varnish gcc" && \
     prepare-yum-repositories rhel-server-rhscl-7-rpms && \

@@ -1,6 +1,4 @@
 FROM centos/s2i-core-centos7:1
-# RHSCL rh-varnish5 image.
-
 EXPOSE 8080
 EXPOSE 8443
 
@@ -22,7 +20,7 @@ LABEL summary="$SUMMARY" \
       version="5" \
       usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=5/test/test-app/ centos/varnish-5-centos7 sample-server" \
       name="centos/varnish-5-centos7" \
-      maintainer="SoftwareCollections.org <sclorg@redhat.com>"
+      maintainer="Uhliarik Lubos <luhliari@redhat.com>"
 
 RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish5-varnish gcc" && \
     yum install -y centos-release-scl-rh && \
