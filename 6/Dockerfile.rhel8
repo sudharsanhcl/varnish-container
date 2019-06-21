@@ -1,4 +1,4 @@
-FROM rhel8/s2i-core:1
+FROM ubi8/s2i-core:1
 EXPOSE 8080
 EXPOSE 8443
 
@@ -8,6 +8,7 @@ running Varnish server or building Varnish-based application. \
 Varnish Cache stores web pages in memory so web servers don't have to create \
 the same web page over and over again. Varnish Cache serves pages much faster \
 than any application server; giving the website a significant speed up." \
+    VARNISH_VCL=/etc/varnish/default.vcl \
     VARNISH_CONFIGURATION_PATH=/etc/varnish
 
 LABEL summary="$SUMMARY" \

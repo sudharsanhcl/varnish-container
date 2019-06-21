@@ -8,6 +8,7 @@ running Varnish server or building Varnish-based application. \
 Varnish Cache stores web pages in memory so web servers don't have to create \
 the same web page over and over again. Varnish Cache serves pages much faster \
 than any application server; giving the website a significant speed up." \
+    VARNISH_VCL=/etc/opt/rh/rh-varnish6/varnish/default.vcl \
     VARNISH_CONFIGURATION_PATH=/etc/opt/rh/rh-varnish6/varnish
 
 LABEL summary="$SUMMARY" \

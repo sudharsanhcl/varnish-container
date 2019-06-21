@@ -25,7 +25,7 @@ fi
 
 exec varnishd \
   -F \
-  -f /etc/opt/rh/rh-varnish6/varnish/default.vcl \
+  -f "$VARNISH_VCL" \
   ${PORT_EXPOSE} \
   -t $VARNISH_TTL \
   -s malloc,256m
