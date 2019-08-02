@@ -23,7 +23,7 @@ LABEL summary="$SUMMARY" \
       name="rhscl/varnish-6-rhel7" \
       maintainer="Uhliarik Lubos <luhliari@redhat.com>"
 
-RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish6-varnish gcc" && \
+RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish6-varnish gcc rh-varnish6-varnish-modules" && \
     prepare-yum-repositories rhel-server-rhscl-7-rpms && \
     yum -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \

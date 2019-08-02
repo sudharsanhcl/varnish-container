@@ -23,7 +23,7 @@ LABEL summary="$SUMMARY" \
       name="centos/varnish-6-centos7" \
       maintainer="Uhliarik Lubos <luhliari@redhat.com>"
 
-RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish6-varnish gcc" && \
+RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish6-varnish gcc rh-varnish6-varnish-modules" && \
     yum install -y centos-release-scl-rh && \
     yum -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
