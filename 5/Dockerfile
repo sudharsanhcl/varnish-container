@@ -17,6 +17,7 @@ LABEL summary="$SUMMARY" \
       io.openshift.expose-services="8080:http,8443:https" \
       io.openshift.tags="builder,varnish,rh-varnish5" \
       com.redhat.component="rh-varnish5-container" \
+      com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#rhel" \
       version="5" \
       usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=5/test/test-app/ centos/varnish-5-centos7 sample-server" \
       name="centos/varnish-5-centos7" \

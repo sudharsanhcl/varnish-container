@@ -18,6 +18,7 @@ LABEL summary="$SUMMARY" \
       io.openshift.expose-services="8080:http,8443:https" \
       io.openshift.tags="builder,varnish6,varnish-6" \
       com.redhat.component="varnish-6-container" \
+      com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#rhel" \
       version="1" \
       usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=6/test/test-app/ rhel8/varnish-6 sample-server" \
       name="rhel8/varnish-6" \
