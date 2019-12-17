@@ -25,8 +25,6 @@ LABEL summary="$SUMMARY" \
 
 RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish5-varnish gcc" && \
     yum install -y centos-release-scl-rh && \
-    yum-config-manager --add-repo https://cbs.centos.org/repos/sclo7-rh-varnish5-rh-candidate/x86_64/os/ && \
-    echo gpgcheck=0 >> /etc/yum.repos.d/cbs.centos.org_repos_sclo7-rh-varnish5-rh-candidate_x86_64_os_.repo && \
     yum -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     rm -f /etc/profile.d/lang.sh && \
