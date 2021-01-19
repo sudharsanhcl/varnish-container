@@ -19,8 +19,8 @@ LABEL summary="$SUMMARY" \
       com.redhat.component="rh-varnish5-container" \
       com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#rhel" \
       version="5" \
-      usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=5/test/test-app/ quay.io/centos7/varnish-5-centos7 sample-server" \
-      name="quay.io/centos7/varnish-5-centos7" \
+      usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=5/test/test-app/ centos7/varnish-5-centos7 sample-server" \
+      name="centos7/varnish-5-centos7" \
       maintainer="Uhliarik Lubos <luhliari@redhat.com>"
 
 RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish5-varnish gcc" && \

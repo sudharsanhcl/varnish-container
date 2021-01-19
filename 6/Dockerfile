@@ -20,8 +20,8 @@ LABEL summary="$SUMMARY" \
       com.redhat.component="rh-varnish6-container" \
       com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#rhel" \
       version="6" \
-      usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=6/test/test-app/ quay.io/centos7/varnish-6-centos7 sample-server" \
-      name="quay.io/centos7/varnish-6-centos7" \
+      usage="s2i build https://github.com/sclorg/varnish-container.git --context-dir=6/test/test-app/ centos7/varnish-6-centos7 sample-server" \
+      name="centos7/varnish-6-centos7" \
       maintainer="Uhliarik Lubos <luhliari@redhat.com>"
 
 RUN INSTALL_PKGS="gettext hostname nss_wrapper bind-utils rh-varnish6-varnish gcc rh-varnish6-varnish-modules" && \
