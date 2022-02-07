@@ -10,7 +10,7 @@ sub vcl_recv {
 
 sub vcl_synth {
          if (resp.status == 301) {
-             set resp.http.Location = "http://example.org";
+             set resp.http.Location = "https://scin-ui-scin-dev.apps.ocp-dc8-03.ikeadt.com";
              return (deliver);
          }
 }
